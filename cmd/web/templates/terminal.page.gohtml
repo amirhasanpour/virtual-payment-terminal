@@ -89,7 +89,7 @@
             let amountToCharge = String(parseFloat(document.getElementById("amount").value) * 100)
             
             let payload = {
-                amount = amountToCharge,
+                amount: amountToCharge,
                 currency: 'cad',
             }
 
@@ -98,7 +98,7 @@
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
-                }
+                },
                 body: JSON.stringify(payload),
             }
 
@@ -112,7 +112,7 @@
                     } catch (err) {
                         console.log(err)
                     }
-                })
+            })
         }
 
         (function() {
