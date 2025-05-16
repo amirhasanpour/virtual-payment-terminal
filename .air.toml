@@ -1,0 +1,43 @@
+# Config file for Air
+
+root = "."
+tmp_dir = "tmp"
+
+[build]
+# ✅ On Windows, we must produce an `.exe` binary
+cmd = "go build -o ./tmp/main.exe ./cmd/web/"
+bin = "tmp/main.exe"
+
+# ✅ DO NOT try to inject env variables into full_bin; instead, use [env]
+full_bin = ""
+
+# Watch extensions and settings
+include_ext = ["go", "tpl", "tmpl", "html", "gohtml"]
+exclude_dir = ["assets", "tmp", "vendor", "frontend/node_modules"]
+exclude_file = []
+exclude_regex = []
+exclude_unchanged = true
+include_dir = []
+follow_symlink = true
+log = "air.log"
+delay = 1000
+stop_on_error = true
+send_interrupt = true
+kill_delay = 500
+
+# ✅ Add your environment variables here instead of full_bin
+[env]
+STRIPE_SECRET = "sk_test_51R8qGhCp2IZMAwdy5kK773KEakM5BcSIjlpmtxZIKyc8rUkFFiVzMWOikxH092H6mdFTwM3EyGB7iVqj7iQGeazx001rixpRY2"
+STRIPE_KEY = "pk_test_51R8qGhCp2IZMAwdymrREMNUJDnXguRaPJJ0L1YZoBHc6zWFUShBXuxbtA2jnWffuNE92ixdgZYi7w4ep4ItkfWd700IkYLe62t"
+
+[log]
+time = false
+
+[color]
+main = "magenta"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+
+[misc]
+clean_on_exit = true
