@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/amirhasanpour/golang-e-commerce-platform/internal/cards"
+	"github.com/amirhasanpour/golang-virtual-payment-terminal/internal/cards"
 )
 
 type stripePayload struct {

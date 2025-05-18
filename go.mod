@@ -1,4 +1,4 @@
-module github.com/amirhasanpour/golang-e-commerce-platform
+module github.com/amirhasanpour/golang-virtual-payment-terminal
 
 go 1.23.5
 
