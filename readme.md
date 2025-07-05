@@ -1,10 +1,15 @@
-# Golang Virtual Payment Terminal
+# Virtual Payment Terminal
+A virtual payment terminal for payments, developed by Go.
+
+---
 
 ## Used Tools:
 
 - [Chi](https://github.com/go-chi/chi)
 - [Chi Cors](https://github.com/go-chi/cors)
 - [Stripe Go](https://github.com/stripe/stripe-go)
+
+---
 
 ## How to run?
 
