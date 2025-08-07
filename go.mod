@@ -1,4 +1,4 @@
-module github.com/amirhasanpour/golang-virtual-payment-terminal
+module github.com/amirhasanpour/virtual-payment-terminal
 
 go 1.23.5
 

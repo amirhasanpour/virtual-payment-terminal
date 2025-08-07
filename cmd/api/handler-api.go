@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/amirhasanpour/golang-virtual-payment-terminal/internal/cards"
+	"github.com/amirhasanpour/virtual-payment-terminal/internal/cards"
 )
 
 type stripePayload struct {
@@ -35,9 +35,9 @@ func (app *application) GetPaymentIntent(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	card := cards.Card {
-		Secret: app.config.stripe.secret,
-		Key: app.config.stripe.key,
+	card := cards.Card{
+		Secret:   app.config.stripe.secret,
+		Key:      app.config.stripe.key,
 		Currency: payload.Currency,
 	}
 
@@ -58,8 +58,8 @@ func (app *application) GetPaymentIntent(w http.ResponseWriter, r *http.Request)
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(out)
 	} else {
-		j := jsonResponse {
-			OK: false,
+		j := jsonResponse{
+			OK:      false,
 			Message: msg,
 			Content: "",
 		}
